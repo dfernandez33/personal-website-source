@@ -1,0 +1,22 @@
+<button class="button is-ghost" (click)="showLogin()">
+    Login
+</button>
+<ng-template [ngIf]="showModal">
+    <div class="modal is-active">
+        <div class="modal-background" (click)="showLogin()"></div>
+        <div class="modal-content">
+            <div class="box">
+                <div class="columns">
+                    <div class="column is-two-thirds">
+                        <input type="password" class="input" placeholder="Enter Password" #password>
+                    </div>
+                    <div class="column">
+                        <button class="button is-success is-fullwidth" (click)="attemptLogin(password.value)">Log In</button>
+                    </div>
+                </div>
+                <p *ngIf="showWrongPassword" class="wrong-password">If you don't know the password, you shouldn't be here!</p>
+            </div>
+        </div>
+        <button class="modal-close is-large" aria-label="close" (click)="showLogin()"></button>
+    </div>
+</ng-template>

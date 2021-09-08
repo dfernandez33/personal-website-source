@@ -1,0 +1,29 @@
+<div class="tabs is-centered is-boxed">
+    <ul>
+      <li [ngClass]="{'is-active': activeClass == 0}">
+        <a id="education" (click)=changeActiveClass($event)>
+          Education
+        </a>
+      </li>
+      <li [ngClass]="{'is-active': activeClass == 1}">
+        <a id="experience" (click)=changeActiveClass($event)>
+          Experience
+        </a>
+      </li>
+      <li [ngClass]="{'is-active': activeClass == 2}">
+        <a id="projects" (click)=changeActiveClass($event)>
+          Projects and Research
+        </a>
+      </li>
+      <li [ngClass]="{'is-active': activeClass == 3}">
+        <a id="leadership" (click)=changeActiveClass($event)>
+          Leadership
+        </a>
+      </li>
+      <li [ngClass]="{'is-active': activeClass == 4}">
+        <a id="skills" (click)=changeActiveClass($event)>
+          Skills
+        </a>
+      </li>
+    </ul>
+  </div>

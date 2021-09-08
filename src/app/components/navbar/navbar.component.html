@@ -1,0 +1,41 @@
+<nav class="navbar">
+    <div class="navbar-brand">
+        <a *ngIf="isMobile" class="navbar-item main-item" [routerLink]="['']">
+            {{centerText}}
+        </a>
+        <a role="button" [ngClass]="{'is-active': showMenu}" class="navbar-burger" 
+        (click)="toggleDropDownMenu()" #navbarBurger>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+    </div>
+
+    <div id="navbar" class="navbar-menu" [ngClass]="{'is-active': showMenu}">
+        <div class="navbar-start">
+            <a class="navbar-item" [routerLink]="['/home']">
+                Home
+            </a>
+            <a class="navbar-item" [routerLink]="['/home']" fragment="aboutme">
+                About Me
+            </a>
+            <a class="navbar-item" [routerLink]="['/resume']">
+                Resume
+            </a>
+        </div>
+        <a *ngIf="!isMobile" class="navbar-item main-item" [routerLink]="['']">
+            {{centerText}}
+        </a>
+        <div class="navbar-end">
+            <a class="navbar-item">
+                Past Projects
+            </a>
+            <a class="navbar-item" [routerLink]="['/photo-gallery']">
+                Photo Gallery
+            </a>
+            <a class="navbar-item">
+                Contact Me
+            </a>
+        </div>
+    </div>
+</nav>

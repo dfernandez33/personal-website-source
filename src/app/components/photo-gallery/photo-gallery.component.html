@@ -1,0 +1,29 @@
+<div class="container">
+    <div *ngIf="imageData$ | async as imageData; else loading "class="columns is-multiline is-centered">
+        <div class="column is-one-third" *ngFor="let data of imageData">
+            <app-photo-gallery-card [imageData]=data></app-photo-gallery-card>
+        </div>
+    </div>
+    <ng-template #loading>
+        <div class="container has-text-centered">
+            <app-spinner></app-spinner>
+            <h1 class="title">Loading...</h1>
+        </div>
+    </ng-template>
+    <button *ngIf="showFAB" class="button is-fab is-rounded is-large" (click)=toggleUploader()>
+        <span class="icon is-small">
+            <i class="fas fa-plus"></i>
+        </span>
+    </button>
+</div>
+<ng-template [ngIf]="showUploader">
+    <div class="modal is-active">
+        <div class="modal-background" (click)=toggleUploader()></div>
+        <div class="modal-content">
+            <app-uploader></app-uploader>
+        </div>
+        <button class="modal-close is-large" aria-label="close" (click)=toggleUploader()></button>
+    </div>
+</ng-template>
+
+  

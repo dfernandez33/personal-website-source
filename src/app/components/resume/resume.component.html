@@ -1,0 +1,218 @@
+<div class="container" [ngSwitch]="activeClass">
+    <app-resume-tabs (activeClassEvent)="updateContent($event)"></app-resume-tabs>
+    <section class="section" *ngSwitchCase="1">
+        <h1 class="title">Experiene</h1>
+        <h2 class="subtitle">
+            <div class="columns is-gapless">
+                <div class="column is-9">
+                    <strong>Google LLC</strong>, Redmond, WA
+                </div>
+                <div class="column">
+                    June 2020 - August 2020
+                </div>
+            </div>
+        </h2>
+        <div class="content">
+            <p>Software Engineering Intern on DCSW Physical Automation Team</p>
+            <ul>
+                <li>
+                    Developed an Angular front end dashboard to monitor and debug robots managed 
+                    by the team using the Alkali platform.
+                </li>
+                <li>
+                    Developed a Java Apps Framework back end server to serve as a pass through layer 
+                    between the front end and the team’s Boq Scaffolding server.
+                </li>
+                <li>
+                    Implemented various RPC handlers in the Boq Scaffolding server to pull data required 
+                    in the front end from the team’s Spanner DB.
+                </li>
+            </ul>
+        </div>
+        <h2 class="subtitle">
+            <div class="columns is-gapless">
+                <div class="column is-9">
+                    <strong>Google LLC</strong>, New York City, NY
+                </div>
+                <div class="column">
+                    May 2019 - August 2019
+                </div>
+            </div>
+        </h2>
+        <div class="content">
+            <p>Software Engineering Intern on Flotilla Team</p>
+            <ul>
+                <li>
+                    Developed a workflow that would audit over 1.5 million database records, across 
+                    three microservices in order to find data inconsistencies amongst the entries.
+                </li>
+                <li>
+                    Used Java to produce the backend code, and create a scalable class hierarchy 
+                    allowing for easy integration of new microservices into the workflow.
+                </li>
+                <li>
+                    Joined the data from the microservices into one joined table through a common 
+                    identifier and used this to surface inconsistencies using data visualization tools.
+                </li>
+            </ul>
+        </div>
+        <h2 class="subtitle">
+            <div class="columns is-gapless">
+                <div class="column is-9">
+                    <strong>Qualcomm Inc</strong>, San Diego, CA
+                </div>
+                <div class="column">
+                    May 2018 - August 2018
+                </div>
+            </div>
+        </h2>
+        <div class="content">
+            <p>Software Engineering Intern on Axiom Team</p>
+            <ul>
+                <li>
+                    Worked on developing UI features for Axiom, an end-to-end test automation web 
+                    application, using Angular5 for the frontend, and a C# based API for communicating 
+                    with the database, on the back end.                 
+                </li>
+                <li>
+                    Used chart.js to display real-time data about user traffic, as well as, prime-ng 
+                    and google material as a front-end framework for styling.
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section class="section" *ngSwitchCase="2">
+        <h1 class="title">Projects and Research</h1>
+        <h2 class="subtitle">
+            <div class="columns is-gapless">
+                <div class="column is-9">
+                    <strong>Plantlanta Volunteering</strong>, Atlanta, GA
+                </div>
+                <div class="column">
+                    January 2019 - December 2019
+                </div>
+            </div>
+        </h2>
+        <div class="content">
+            <ul>
+                <li>
+                    Created a platform for Plantlanta that allowed volunteers to register for events and 
+                    redeem points in an in-app marketplace
+                </li>
+                <li>
+                    Built mobile client using Flutter framework, web client using Angular8, Firebase 
+                    Firestore for data storage, and Firebase Cloud Functions for serverless backend.
+                </li>
+                <li>
+                    Project won 1st place in the 2019 Fall Junior Design Expo based on judging from industry 
+                    partners including Walmart, Stryker, and State Farm.
+                </li>
+            </ul>
+        </div>
+        <h2 class="subtitle">
+            <div class="columns is-gapless">
+                <div class="column is-9">
+                    <strong>Project Bronco</strong>, Atlanta, GA
+                </div>
+                <div class="column">
+                    August 2019 - December 2019
+                </div>
+            </div>
+        </h2>
+        <div class="content">
+            <ul>
+                <li>
+                    Rewired retail RC car to a raspberry pi in order to control it through a mobile application, 
+                    using python to interface withthe hardware.
+                </li>
+                <li>
+                    Used laser range finder and sonar sensors to provide the car with “smart” features 
+                    such as avoiding collisions, and speakers to notify the user through audio about obstacles.
+                </li>
+                <li>
+                    Prototyped initial stages of the project using an Mbed microcontroller, and C++ to 
+                    interface with hardware.
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section class="section" *ngSwitchCase="3">
+        <h1 class="title">Leadership</h1>
+        <h2 class="subtitle">
+            <div class="columns is-gapless">
+                <div class="column is-9">
+                    <strong>SHPE IT Team Senior Board of Directors</strong>, Atlanta, GA
+                </div>
+                <div class="column">
+                    May 2018 - May 2019
+                </div>
+            </div>
+        </h2>
+        <div class="content">
+            <ul>
+                <li>
+                    Developed and maintained organization’s mobile/web application, and public 
+                    information website using React.js
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section class="section" *ngSwitchCase="4">
+        <h1 class="title">Skills</h1>
+        <h2 class="subtitle">
+            <strong>Programming:</strong> Java, C/C++, C#, Python, HTML, CSS, TypeScript, Matlab
+        </h2>
+        <br>
+        <h2 class="subtitle">
+            <strong>Frameworks:</strong> Angular, Pytorch, Android Studio (intermediate), React (novice)
+        </h2>
+        <br>
+        <h2 class="subtitle">
+            <strong>Related Coursework:</strong>  Deep Learning, Computer Vision, Robot Planning, Graduate AI, 
+            Perception and Robotics, Learning from Demonstration, Mobile Manipulaiton, Machine Learning, 
+            Embedded System Design, Computer Organization, Systems and Networks, Digital Design Lab
+        </h2>
+        <br>
+        <h2 class="subtitle">
+            <strong>Languages:</strong> Spanish, English
+        </h2>
+        <br>
+        <h2 class="subtitle">
+            <strong>Software:</strong> SolidWorks
+        </h2>
+    </section>
+    <section class="section" *ngSwitchDefault>
+        <h1 class="title">Education</h1>
+        <h2 class="subtitle">
+            <div class="columns is-gapless">
+                <div class="column is-9">
+                    <strong>Georgia Institute of Technology</strong>, Atlanta, GA
+                </div>
+                <div class="column">
+                    August 2020 - May 2021
+                </div>
+            </div>
+        </h2>
+        <div class="content">
+            <ul>
+                <li>Master's of Science in Computer Science with concentrations in Computational Perception and Robotics.</li>
+                <li>Worked in Seth Hutchinson's lab doing researh on implementing safety critical controllers using RL.</li>
+            </ul>
+        </div>
+        <h2 class="subtitle">
+            <div class="columns is-gapless">
+                <div class="column is-9">
+                    <strong>Georgia Institute of Technology</strong>, Atlanta, GA
+                </div>
+                <div class="column">
+                    August 2016 - May 2020
+                </div>
+            </div>
+        </h2>
+        <div class="content">
+            <ul>
+                <li>Bachelor's of Science in Computer Science with concentrations in Intelligence and Devices.</li>
+            </ul>
+        </div>
+    </section>
+</div>
